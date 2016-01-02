@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>2.0</version>
-    <date>2016-01-02T09:31:52Z</date>
+    <date>2016-01-02T09:38:15Z</date>
     <groups>
         <group>
             <name>Linux servers</name>
@@ -109,7 +109,7 @@
                     </trigger_prototypes>
                     <graph_prototypes>
                         <graph_prototype>
-                            <name>Thermal-{#TZ}-{HOST.HOST}</name>
+                            <name>{#TZ}</name>
                             <width>900</width>
                             <height>200</height>
                             <yaxismin>0.0000</yaxismin>
