@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>2.0</version>
-    <date>2016-01-02T09:04:37Z</date>
+    <date>2016-01-02T09:31:52Z</date>
     <groups>
         <group>
             <name>Linux servers</name>
@@ -29,7 +29,7 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>thermal.discovery</key>
-                    <delay>86400</delay>
+                    <delay>30</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -53,7 +53,7 @@
                     <description/>
                     <item_prototypes>
                         <item_prototype>
-                            <name>Thermal-{#TZ}-{HOST.HOST}</name>
+                            <name>{#TZ}</name>
                             <type>0</type>
                             <snmp_community/>
                             <multiplier>1</multiplier>
@@ -99,7 +99,7 @@
                     <trigger_prototypes>
                         <trigger_prototype>
                             <expression>({tpl_hw_thermal:thermal.item[{#TZ},temp].last()}&gt;90 &amp; {TRIGGER.VALUE}=0) | ({tpl_hw_thermal:thermal.item[{#TZ},temp].last()}&gt;80 &amp; {TRIGGER.VALUE}=1)</expression>
-                            <name>High temperature {#TZ} {HOST.HOST}</name>
+                            <name>{#TZ} - high temperature</name>
                             <url/>
                             <status>0</status>
                             <priority>4</priority>
